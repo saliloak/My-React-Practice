@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Gender from './Gender';
 import EmployeeItem from './EmployeeItem';
 import Salutation from './Salutation';
+import Input from './Input';
 
 class Content extends Component {
     constructor() {
@@ -10,7 +11,8 @@ class Content extends Component {
             salutation: '',
             gender: '',
             title: '',
-            name: ''
+            name: '',
+            salary: ''
         }
     }
 
@@ -20,7 +22,8 @@ class Content extends Component {
             title: this.refs.title.value,
             name: this.refs.name.value,
             gender: this.state.gender,
-            salutation: this.state.salutation
+            salutation: this.state.salutation,
+            salary: this.state.salary
         }, function () {
             this.props.updateDataProp(this.state);
         })
@@ -42,6 +45,17 @@ class Content extends Component {
             console.log(this.state);
         })
     }
+
+    TakeInput(input) {
+        if (input.id === 'txtSalary') {
+            let value = input.value
+            this.setState({
+                salary: value
+            }, function () {
+                console.log(this.state);
+            })
+        }
+    }
     render() {
         let employees = this.props.myDataProp.information.map(employee => {
             return (
@@ -54,7 +68,7 @@ class Content extends Component {
             displayMessage = <h2>Existing Employees</h2>;
         }
         else {
-            displayMessage = <h2>No Existing Employees Currently</h2>;
+            displayMessage = <h2>There are no Existing Employees Currently</h2>;
         }
         return (
             <div>
@@ -70,6 +84,10 @@ class Content extends Component {
                     <div>
                         <label>Title</label><br />
                         <input type="text" ref="title" />
+                    </div>
+                    <div>
+                        <label>Salary</label><br />
+                        <Input inputId={"txtSalary"} inputType={"text"} inputPlaceholder={"Enter Salary"} refsValue={"salary"} inputValue={this.TakeInput.bind(this)} />
                     </div>
                     <div>
                         <label>Gender :</label>

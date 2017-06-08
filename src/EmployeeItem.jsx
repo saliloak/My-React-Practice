@@ -10,6 +10,8 @@ class EmployeeItem extends Component {
                     <h4 className="App-inline">Title:</h4><strong>{this.props.employee.title}</strong>
                     <br/>
                     <h4 className="App-inline">Gender:</h4><strong>{this.props.employee.gender}</strong>
+                    <br/>
+                    <h4 className="App-inline">Salary:</h4><strong>{this.props.employee.salary}</strong>
                 </div>
             </div>
         )
