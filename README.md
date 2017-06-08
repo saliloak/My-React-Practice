@@ -6,4 +6,6 @@ There is the one main App.jsx Component within it i have put in a Content Compon
 The content component has Two other nested components in it namely Gender which is a Radio button List and a Salutation Component
 which allows me to choose Gender
 
+#Update: Also added a dynamic Input Component to be reusable
+
 I have tried to keep components at a minute level like this so as to get a feel of react
