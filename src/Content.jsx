@@ -54,7 +54,7 @@ class Content extends Component {
             displayMessage = <h2>Existing Employees</h2>;
         }
         else {
-            displayMessage = <h2>There are no Existing Employees Currently</h2>;
+            displayMessage = <h2>No Existing Employees Currently</h2>;
         }
         return (
             <div>
