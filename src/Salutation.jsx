@@ -14,8 +14,8 @@ class Salutation extends Component {
             return <option key={category} value={category}>{category}</option>
         })
         return (
-            <div>
-                <select onChange={this.chooseSalutation.bind(this)}>
+            <div className="col-lg-4" style={{'paddingLeft':'0px'}}>
+                <select className="form-control" onChange={this.chooseSalutation.bind(this)}>
                     {categoryOptions}
                 </select>
             </div>
