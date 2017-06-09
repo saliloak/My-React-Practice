@@ -39,10 +39,26 @@ class App extends Component {
             information: employees
         })
     }
+
+    onDelete(id) {
+        let employees = this.state.information;
+        let index = employees.find(x => x.id === id);
+        employees.splice(index, 1);
+        this.setState({
+            information: employees
+        })
+    }
+
+    onEdit(id) {
+        let employees = this.state.information;
+        let index = employees.find(x => x.id === id);
+        console.log('In app.js Edit with employee : ' + index.name);
+    }
+
     render() {
         return (
             <div>
-                <Content myDataProp={this.state} updateDataProp={this.updateState.bind(this)} />
+                <Content myDataProp={this.state} updateDataProp={this.updateState.bind(this)} deleteEmployeeMain={this.onDelete.bind(this)} editEmployeeMain={this.onEdit.bind(this)} />
             </div>
         )
     }

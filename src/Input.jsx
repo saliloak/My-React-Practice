@@ -10,8 +10,8 @@ class Input extends Component {
     }
     render() {
         return (
-            <div>
-                <input id={this.props.inputId} type={this.props.inputType} placeholder={this.props.inputPlaceholder} ref={this.props.refsValue} onChange={this.bindInputChange.bind(this, this.props.inputId)} />
+            <div className="col-lg-6">
+                <input className="form-control" id={this.props.inputId} type={this.props.inputType} placeholder={this.props.inputPlaceholder} ref={this.props.refsValue} onChange={this.bindInputChange.bind(this, this.props.inputId)} />
             </div>
         )
     }
