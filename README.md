@@ -9,3 +9,5 @@ which allows me to choose Gender
 #Update: Also added a dynamic Input Component to be reusable
 
 I have tried to keep components at a minute level like this so as to get a feel of react
+
+#Update 9/6/2017: Added Bootstrap theme, Updated UI, Added Delete functionality, still not able to figure how to edit this but i know gradually i will :D
